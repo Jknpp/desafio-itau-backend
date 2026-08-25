@@ -21,4 +21,10 @@ public class TransacaoController {
     public void fazerTransacao(@Valid @RequestBody Transacao transacao){
         transacaoService.fazerTransacao(transacao);
     }
+
+    @DeleteMapping
+    @ResponseStatus(HttpStatus.OK)
+    public void limparTransacoes(){
+        transacaoService.limparTransacoes();
+    }
 }

@@ -1,8 +1,20 @@
 package com.Jknpp.DesafioItau.dto;
 
-public record EstatisticasResponse(long count,
-                                   double sum,
-                                   double avg,
-                                   double min,
-                                   double max) {
+import io.swagger.v3.oas.annotations.media.Schema;
+
+public record EstatisticasResponse(
+        @Schema(description = "Quantidade de transações")
+        long count,
+
+        @Schema(description = "Soma dos valores")
+        double sum,
+
+        @Schema(description = "Média dos valores")
+        double avg,
+
+        @Schema(description = "Menor valor")
+        double min,
+
+        @Schema(description = "Maior valor")
+        double max) {
 }
